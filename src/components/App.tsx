@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import ToDoItems from './ToDoItems';
 
 
 function App() {
@@ -21,10 +22,9 @@ function App() {
 
 // Map through array of to do list items and render each item in a list item
    const arrayItems = buttonText.map((buttonText: any, i: any)=>
-   <li key={i} id="list"> 
-    <input type="checkbox" className='checkBox'  ></input>
-   <span>{buttonText}</span>
-    </li>
+    <ToDoItems>
+      buttonText={buttonText}
+    </ToDoItems>
    )
 
   return (
