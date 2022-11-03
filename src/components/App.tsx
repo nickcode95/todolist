@@ -22,9 +22,7 @@ function App() {
 
 // Map through array of to do list items and render each item in a list item
    const arrayItems = buttonText.map((buttonText: any, i: any)=>
-    <ToDoItems>
-      buttonText={buttonText}
-    </ToDoItems>
+    <ToDoItems key={i} text={buttonText} > </ToDoItems>
    )
 
   return (

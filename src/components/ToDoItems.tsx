@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 
 function ToDoItems (props: any) {
     return (
-        <li key={Number.toString()}>
+        <li key={props.i}>
         <input type="checkbox" className='checkBox'></input>
-        <span>{props.buttonText}</span>
+        <span>{props.text}</span>
         </li>
     )
 }
