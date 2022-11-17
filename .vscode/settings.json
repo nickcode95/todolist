@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/677b9361-696b-426b-a712-976620de9736/AppServices/subscriptions/677b9361-696b-426b-a712-976620de9736/resourceGroups/todolist/providers/Microsoft.Web/sites/need-to-do-list-react",
+    "appService.deploySubpath": "."
+}
