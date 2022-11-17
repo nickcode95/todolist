@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React, {Dispatch, SetStateAction, useState} from 'react';
 import ToDoItems from './ToDoItems';
-
 
 function App() {
   // Set initial state of user input to empty
@@ -19,10 +18,25 @@ function App() {
     changeUserText('');
    }
 
+  //  Using the index of items array to remove it from the array. This is passed as a props and assigned to the bin icon
+   function deleteItem (id: any) {
+    changeButtonText(prevItems  => {
+      return prevItems.filter(
+        (item: any, index: any) => {
+          return index !== id
+        }
+      )
+    })
+   }
 
 // Map through array of to do list items and render each item in a list item
    const arrayItems = buttonText.map((buttonText: any, i: any)=>
-    <ToDoItems key={i} text={buttonText} > </ToDoItems>
+    <ToDoItems 
+    key={i} 
+    id={i}
+    text={buttonText} 
+    onChecked={deleteItem}>    
+    </ToDoItems>
    )
 
   return (

@@ -76,6 +76,7 @@ li {
   text-align: left;
   margin-right: 10rem;
   padding: 0.5rem;
+  display: inline-block;
 }
 
 .checkBox{
@@ -86,9 +87,26 @@ li {
   text-decoration:line-through;
 }
 
+.lineThrough {
+  text-decoration: line-through;
+}
+
 input[type='checkbox'] {
   position: absolute;
   margin-left: 15vw;
   float: right;
 }
 
+.listStyle {
+  padding: 0;
+  left: 0;
+}
+
+#trash {
+  left: 0;
+  margin-left: 0;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  position: relative;
+}
