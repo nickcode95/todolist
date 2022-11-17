@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 100vw;
   height: auto;
   min-height: 500px;
   max-width: 500px;
@@ -23,7 +23,7 @@ body {
   background-size: 25px 25px;
   border-radius: 20px;
   box-shadow: 4px 3px 7px 2px #00000040;
-  padding: 1rem;
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 .heading {
@@ -59,8 +59,7 @@ button {
   padding: 0;
   border: none;
   font-family: "Architects Daughter", cursive;
-  text-decoration: none;
-  padding-bottom: 3px;
+  text-decoration: none; 
   border-radius: 5px;
   background-color: #ffeaa7;
 }
@@ -72,29 +71,44 @@ button span {
   border: 2px solid hsl(198, 1%, 29%);
 }
 
+.flex-container {
+  display: flex;
+  align-items: center;
+  }
+
+.li-flex-item {
+  padding: 0;
+  margin: 0;
+  flex-basis: 100%;
+}
+
+.img-flex-item {
+  align-items: center;
+}
+
+.checkbox-flex-item {
+  align-items: baseline;
+}
+
 li {
   text-align: left;
-  margin-right: 10rem;
+  margin: 0;
   padding: 0.5rem;
-  display: inline-block;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .checkBox{
  display: inline;
 }
 
-.checkBox:checked + span{
-  text-decoration:line-through;
-}
-
-.lineThrough {
-  text-decoration: line-through;
-}
 
 input[type='checkbox'] {
-  position: absolute;
-  margin-left: 15vw;
-  float: right;
+  display: inline-block;
+
 }
 
 .listStyle {
@@ -104,9 +118,8 @@ input[type='checkbox'] {
 
 #trash {
   left: 0;
-  margin-left: 0;
+  margin: 0;
   height: 20px;
   width: 20px;
   display: inline-block;
-  position: relative;
 }
